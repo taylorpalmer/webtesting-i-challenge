@@ -6,15 +6,27 @@ module.exports = {
 };
 
 function succeed(item) {
-  return { ...item };
+  const result = {};
+
+  if (item.succeed) {
+    result.succeed = succeed(...item.succeed);
+  }
 }
 
 function fail(item) {
-  return { ...item };
+  const result = {};
+
+  if (item.fail) {
+    result.fail = fail(...item.fail);
+  }
 }
 
 function repair(item) {
-  return { ...item };
+  const result = {};
+
+  if (item.repair) {
+    result.repair = repair(...item.repair);
+  }
 }
 
 function get(item) {

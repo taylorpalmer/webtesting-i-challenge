@@ -1,13 +1,12 @@
 {
-	"private": true,
-	"scripts": {
-		"test": "jest",
-		"test:watch": "jest --watch"
-	},
-	"dependencies": {
-		"@types/jest": "^26.0.4"
-	},
-	"devDependencies": {
-		"jest": "^26.1.0"
-	}
+  "private": true,
+  "scripts": {
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.4"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
 }

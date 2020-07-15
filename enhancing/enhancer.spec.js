@@ -2,7 +2,6 @@ const enhancer = require("./enhancer.js");
 
 describe("enhancer unit tests", () => {
   it("repairs", () => {
-    // expect(enhancer.repair(name, durability, enhancement)).toEqual({})
     expect(
       enhancer.repair({ name: "string", durability: 100, enhancement: 20 })
     ).toEqual({ name: "string", durability: 100, enhancement: 20 });
@@ -15,7 +14,6 @@ describe("enhancer unit tests", () => {
   });
 
   it("succeeds", () => {
-    // expect(enhancer.repair(name, durability, enhancement)).toEqual({name: "string", durability: 100, enhancement: 20})
     expect(
       enhancer.succeed({ name: "string", durability: 100, enhancement: 20 })
     ).toEqual({ name: "string", durability: 100, enhancement: 20 });
@@ -28,10 +26,17 @@ describe("enhancer unit tests", () => {
   });
 
   it("fails", () => {
-    // expect(enhancer.repair(name, durability, enhancement)).toEqual({})
     expect(
-      enhancer.fail({ name: "string", durability: 100, enhancement: 19 })
-    ).toEqual({ name: "string", durability: 90, enhancement: 18 });
+      enhancer.fail({
+        name: "string",
+        durability: 100,
+        enhancement: 19,
+      })
+    ).toEqual({
+      name: "string",
+      durability: 90,
+      enhancement: 18,
+    });
     expect(
       enhancer.fail({ name: "string", durability: 51, enhancement: 10 })
     ).toEqual({ name: "string", durability: 46, enhancement: 10 });
