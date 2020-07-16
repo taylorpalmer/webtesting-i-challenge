@@ -26,26 +26,26 @@ describe("enhancer unit tests", () => {
   });
 
   it("fails", () => {
-    // expect(enhancer.fail(item1)).toEqual({
-    //   ...item1,
-    //   durability: 90,
-    //   enhancement: 18,
-    // });
-    expect(enhancer.fail(item2)).toEqual({
-      ...item2,
-      durability: 46,
-      enhancement: 10,
-    });
-    expect(enhancer.fail(item3)).toEqual({
-      ...item3,
-      durability: 0,
-      enhancement: 1,
-    });
-    expect(enhancer.fail(item4)).toEqual({
-      ...item4,
+    expect(enhancer.fail(item1)).toEqual({
+      ...item1,
       durability: 90,
-      enhancement: 15,
+      enhancement: 18,
     });
+    // expect(enhancer.fail(item2)).toEqual({
+    //   ...item2,
+    //   durability: 46,
+    //   enhancement: 10,
+    // });
+    // expect(enhancer.fail(item3)).toEqual({
+    //   ...item3,
+    //   durability: 0,
+    //   enhancement: 1,
+    // });
+    // expect(enhancer.fail(item4)).toEqual({
+    //   ...item4,
+    //   durability: 90,
+    //   enhancement: 15,
+    // });
   });
 });
 
